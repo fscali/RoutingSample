@@ -1,4 +1,8 @@
-<h2>HEROES LIST</h2>
+<h2>Hero Detail</h2>
 
-<p> Set your heroes here</p>
+<div *ngIf="hero">
+    You selected the hero: {{hero.name}}
 
+</div>
+
+<button (click)="back()">Back</button>
