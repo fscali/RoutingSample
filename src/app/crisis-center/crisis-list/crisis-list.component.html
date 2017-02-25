@@ -1,0 +1,8 @@
+<h3>CRISIS LIST</h3>
+<ul>
+    <li *ngFor="let c of crises " (click)="onSelect(c)" [class.selected]="isSelected(c)">
+            <span class="badge">{{c.id}}</span> {{c.name}}
+    </li>
+</ul>
+
+<router-outlet></router-outlet>
