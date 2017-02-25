@@ -12,12 +12,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { CrisisModule } from './crisis-center/crisis.module';
 import { CrisisCenterRoutingModule } from './crisis-center/crisis-center-routing.module';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    ComposeMessageComponent,
   //  AdminComponent,
   //  LoginComponent
   ],

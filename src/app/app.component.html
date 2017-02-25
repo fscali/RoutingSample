@@ -7,4 +7,8 @@
   <a routerLink='/admin' routerLinkActive='active'>Admin</a>
   <a routerLink='/login' routerLinkActive='active'>Login</a>
 </nav>
+
+<a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
+
 <router-outlet></router-outlet>
+<router-outlet name="popup"></router-outlet>
