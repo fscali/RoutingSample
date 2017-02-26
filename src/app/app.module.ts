@@ -12,8 +12,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { CrisisModule } from './crisis-center/crisis.module';
 import { CrisisCenterRoutingModule } from './crisis-center/crisis-center-routing.module';
-import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
+import { AdminModule } from './admin/admin.module';
+import { AdminRoutingModule } from './admin/admin-routing.module';
+
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { LoginComponent } from './login/login.component';
+
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,7 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
     PageNotFoundComponent,
     ComposeMessageComponent,
   //  AdminComponent,
-  //  LoginComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -29,10 +35,14 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
     HttpModule,
     HeroesModule,
     CrisisModule,
+    AdminModule,
     CrisisCenterRoutingModule,
+    //AdminRoutingModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

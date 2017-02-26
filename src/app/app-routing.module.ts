@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   {
@@ -14,7 +15,10 @@ const appRoutes: Routes = [
     component: ComposeMessageComponent,
     outlet: 'popup'
   },
-
+  {
+    path: 'login',
+    component: LoginComponent
+  },
   {
     path: '**', component: PageNotFoundComponent
   }
