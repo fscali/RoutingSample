@@ -10,6 +10,8 @@ import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-ho
 import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 
+import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
+
 import { CrisisService } from './crisis.service';
 
 @NgModule({
@@ -17,7 +19,8 @@ import { CrisisService } from './crisis.service';
         CommonModule,
         HttpModule,
         RouterModule,
-        FormsModule
+        FormsModule,
+        CrisisCenterRoutingModule
     ],
     declarations: [
         CrisisCenterComponent,

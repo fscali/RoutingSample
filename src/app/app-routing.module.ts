@@ -24,6 +24,10 @@ const appRoutes: Routes = [
     canLoad: [AuthGuardService]
   },
   {
+    path: 'crisis-center',
+    loadChildren: 'app/crisis-center/crisis.module#CrisisModule'
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
