@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 
 import { CrisisCenterComponent } from './crisis-center.component';
 import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-home.component';
@@ -14,7 +16,8 @@ import { CrisisService } from './crisis.service';
     imports: [
         CommonModule,
         HttpModule,
-        RouterModule
+        RouterModule,
+        FormsModule
     ],
     declarations: [
         CrisisCenterComponent,

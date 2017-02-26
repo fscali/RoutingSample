@@ -3,7 +3,12 @@
 <div *ngIf="crisis">
     You selected the crisis: {{crisis.name}}
 
+    <div>
+      <input type="text" [(ngModel)]="newName"/>
+    </div>
+
 </div>
 
 <button (click)="gotoCrises()">Back to list</button>
+<button (click)="save()">Save and back to list</button>
 

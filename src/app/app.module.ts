@@ -20,6 +20,7 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 import { LoginComponent } from './login/login.component';
 
 import { AuthService } from './auth.service';
+import { DialogService } from './dialog.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AuthService } from './auth.service';
     AppRoutingModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    DialogService
   ],
   bootstrap: [AppComponent]
 })

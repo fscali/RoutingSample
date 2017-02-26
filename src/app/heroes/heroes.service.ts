@@ -24,4 +24,6 @@ export class HeroesService {
       .then(response => response.json().data as Hero);
   }
 
+  
+
 }
