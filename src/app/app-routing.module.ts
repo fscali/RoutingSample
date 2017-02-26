@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { CanDeActivateGuard } from './can-deactivate-guard.service';
 
+import { AuthGuardService } from './admin/auth-guard.service';
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -15,6 +17,11 @@ const appRoutes: Routes = [
     path: 'compose',
     component: ComposeMessageComponent,
     outlet: 'popup'
+  },
+  {
+    path: 'admin',
+    loadChildren: 'app/admin/admin.module#AdminModule',
+    canLoad: [AuthGuardService]
   },
   {
     path: 'login',

@@ -10,7 +10,8 @@ import { AuthGuardService } from './auth-guard.service';
 
 const adminRoutes: Routes = [
     {
-        path: 'admin',
+        //path: 'admin',
+        path: '', //for async module loading
         component: AdminComponent,
         canActivate: [AuthGuardService],
         children: [

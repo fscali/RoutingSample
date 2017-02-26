@@ -25,7 +25,7 @@ import { AuthGuardService } from './auth-guard.service';
         AdminDashBoardComponent
     ],
     providers: [
-        AuthGuardService
+       // AuthGuardService //moved in main app module for lazy loading
     ]
 })
 export class AdminModule {

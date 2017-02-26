@@ -13,7 +13,8 @@ import { HeroesModule } from './heroes/heroes.module';
 import { CrisisModule } from './crisis-center/crisis.module';
 import { CrisisCenterRoutingModule } from './crisis-center/crisis-center-routing.module';
 
-import { AdminModule } from './admin/admin.module';
+//commented out for async module loading
+//import { AdminModule } from './admin/admin.module';
 import { AdminRoutingModule } from './admin/admin-routing.module';
 
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
@@ -21,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 
 import { AuthService } from './auth.service';
 import { DialogService } from './dialog.service';
+import { AuthGuardService } from './admin/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -36,14 +38,15 @@ import { DialogService } from './dialog.service';
     HttpModule,
     HeroesModule,
     CrisisModule,
-    AdminModule,
+   // AdminModule,
     CrisisCenterRoutingModule,
     //AdminRoutingModule,
     AppRoutingModule
   ],
   providers: [
     AuthService,
-    DialogService
+    DialogService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
