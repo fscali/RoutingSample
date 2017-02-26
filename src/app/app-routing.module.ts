@@ -7,6 +7,8 @@ import { CanDeActivateGuard } from './can-deactivate-guard.service';
 
 import { AuthGuardService } from './admin/auth-guard.service';
 
+import { SelectivePreloadingStrategy } from './selective-preloading-strategy';
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
   },
   {
     path: 'crisis-center',
-    loadChildren: 'app/crisis-center/crisis.module#CrisisModule'
+    loadChildren: 'app/crisis-center/crisis.module#CrisisModule',
+    data: {preload: true}
   },
   {
     path: 'login',
@@ -39,10 +42,13 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: SelectivePreloadingStrategy }),
   ],
   exports: [RouterModule],
-  providers: [CanDeActivateGuard]
+  providers: [
+    CanDeActivateGuard,
+    SelectivePreloadingStrategy
+    ]
 
 })
 export class AppRoutingModule {

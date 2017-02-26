@@ -4,6 +4,12 @@
 <a id="anchor"></a>
 <p>Token: {{ token | async }}</p>
 
+Preloaded Modules
+<ul>
+  <li *ngFor="let module of modules">{{ module }}</li>
+</ul>
+
+
 <nav>
   <a routerLink='manage-heroes' routerLinkActive='active'>Manage Heroes</a>
   <a routerLink='manage-crises' routerLinkActive='active'>Manage Crises</a>

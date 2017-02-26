@@ -26,6 +26,7 @@ import { AuthService } from './auth.service';
 import { DialogService } from './dialog.service';
 import { AuthGuardService } from './admin/auth-guard.service';
 
+import { Router } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,4 +53,9 @@ import { AuthGuardService } from './admin/auth-guard.service';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  // Diagnostic only: inspect router configuration
+  constructor(router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
+}
